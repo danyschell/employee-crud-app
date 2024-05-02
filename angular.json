@@ -27,6 +27,7 @@
             "outputPath": "dist/employee-crud-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/employee-crud-app/",
             "polyfills": [
               "zone.js"
             ],
@@ -46,8 +47,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "6mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -101,8 +102,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
